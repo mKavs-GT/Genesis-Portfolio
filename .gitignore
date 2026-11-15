@@ -1,0 +1,39 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Editors & IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Temporary & Backup files
+*.bak
+*.backup
+*.tmp
+*~
+
+# Logs & Environment
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.env.local
+
+# Raw unoptimized video backups
+adv1.mp4
+adv2.mp4
+adv3.mp4
+herovideo.mp4
+productionstudio.mp4
+turnheads1.mp4
+turnheads2.mp4
+unveiling.mp4
+raw_videos/
