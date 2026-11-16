@@ -343,5 +343,25 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+
+    <!-- GENESIS DIALOG MODAL -->
+    <div id="genesis-modal-overlay" class="genesis-modal-overlay">
+        <div class="genesis-modal-card">
+            <button class="genesis-modal-close" id="genesis-modal-close" aria-label="Close dialog">&times;</button>
+            <div class="genesis-modal-icon-wrap" id="genesis-modal-icon">&#10003;</div>
+            <div class="genesis-modal-badge" id="genesis-modal-badge">STUDIO NOTICE</div>
+            <h3 class="genesis-modal-title" id="genesis-modal-title">Notice</h3>
+            <p class="genesis-modal-desc" id="genesis-modal-desc"></p>
+            <div class="genesis-modal-details" id="genesis-modal-details"></div>
+            <div class="genesis-modal-actions">
+                <button class="genesis-modal-btn" id="genesis-modal-btn">Acknowledge</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- GENESIS TOAST -->
+    <div id="genesis-toast" class="genesis-toast">
+        <span id="genesis-toast-msg">Action processed successfully</span>
+    </div>
 </body>
 </html>

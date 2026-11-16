@@ -1713,3 +1713,205 @@ body.nav-open {
         animation-iteration-count: 1 !important;
     }
 }
+
+/* ======================================================== */
+/* GENESIS STUDIO DIALOG MODAL & TOAST SYSTEM               */
+/* ======================================================== */
+.genesis-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(5, 5, 5, 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.genesis-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+.genesis-modal-card {
+    background: #0d0d0d;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+    max-width: 500px;
+    width: 100%;
+    padding: 36px 32px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), 0 0 40px rgba(255, 255, 255, 0.05);
+    transform: scale(0.94) translateY(20px);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    color: #fff;
+    font-family: inherit;
+}
+.genesis-modal-overlay.active .genesis-modal-card {
+    transform: scale(1) translateY(0);
+}
+.genesis-modal-close {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, transform 0.2s;
+}
+.genesis-modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+.genesis-modal-icon-wrap {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    color: #fff;
+}
+.genesis-modal-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #fff;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+.genesis-modal-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+}
+.genesis-modal-desc {
+    color: #a0a0a0;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0 0 22px;
+}
+.genesis-modal-details {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 12px;
+}
+.genesis-detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 8px;
+}
+.genesis-detail-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.genesis-detail-label {
+    color: #666;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+.genesis-detail-val {
+    color: #fff;
+    font-weight: 600;
+}
+.genesis-modal-actions {
+    display: flex;
+    gap: 12px;
+}
+.genesis-modal-btn {
+    flex: 1;
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.15s;
+}
+.genesis-modal-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+.genesis-toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 10px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.8);
+    z-index: 100000;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+.genesis-toast.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+.services-list ul li {
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+    border-radius: 8px;
+    padding: 10px 14px;
+}
+.services-list ul li:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateX(6px);
+}
+.project-card {
+    cursor: pointer;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.project-card:hover {
+    transform: translateY(-4px);
+}
